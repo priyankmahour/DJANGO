@@ -1,0 +1,21 @@
+{% extends "basic_app/base.html" %}
+{% load staticfiles %}
+
+{% block title %}  REGISTER FORM {% endblock title %}
+
+{% block content %}
+
+  <div class="jumbotron" align="center">
+     <form  method="post">
+       <fieldset>
+           <legend>Student Registration Form</legend>
+
+             {{form.as_p}} {% csrf_token %}
+
+             <input type="submit" name="submit" value="Register ">
+       </fieldset>
+     </form>
+  </div>
+
+
+{% endblock content %}
