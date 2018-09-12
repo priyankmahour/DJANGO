@@ -19,6 +19,7 @@ from basic_App import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',views.index_view,name="index_view"),
     url(r'^upper/',views.upper_view,name="upper_view"),
     url(r'^truncate/',views.truncate_view,name="truncate_view"),
 ]

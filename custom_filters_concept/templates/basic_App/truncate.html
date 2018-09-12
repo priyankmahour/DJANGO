@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load cust_filters %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -9,8 +10,8 @@
 
         {% for d in data %}
            <ul>
-                <li>{{d.name}}</li>
-                <li>{{d.location|add:"i am the location "}}</li>
+                <li>{{d.name|truncate:5}}</li> <!--custom filter ...you can give any value in argumrnt -->
+                <li>{{d.location|add:"  i  am  using |add filter "}}</li>
                 <li>{{d.date|date:"d-m-Y"}}</li>
            </ul><hr>
 
