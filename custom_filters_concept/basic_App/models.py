@@ -7,4 +7,5 @@ class Company(models.Model):
     location  = models.CharField(max_length=128)
     date      = models.DateField()
 
-    
+    def __str__(self):
+       return self.name

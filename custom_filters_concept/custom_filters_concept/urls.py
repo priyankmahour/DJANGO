@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from basic_App import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^upper/',views.upper_view,name="upper_view"),
+    url(r'^truncate/',views.truncate_view,name="truncate_view"),
 ]
