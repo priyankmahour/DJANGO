@@ -18,3 +18,12 @@ def job_view(request):
     response = render(request,"basic_app/job.html")
     response.set_cookie('age',age)
     return(response)
+
+
+def result_view(request):
+    job =  request.GET['job']
+    name = request.COOKIES.get('name')
+    age = request.COOKIES.get('age')
+    context ={'name':name,'job':job,'age':age}
+    response = render(request,"basic_app/result.html",context)
+    return(response)
