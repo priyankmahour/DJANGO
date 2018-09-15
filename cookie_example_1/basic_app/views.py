@@ -7,5 +7,5 @@ def count_view(request):
     new_count = count+1
     context = {'count':new_count}
     response = render(request,"basic_app/count.html",context)
-    response.set_cookie('count',new_count)
+    response.set_cookie('count',new_count,max_age=30)
     return response
